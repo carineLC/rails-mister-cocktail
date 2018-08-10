@@ -1,25 +1,18 @@
+<%= render 'shared/smallBanner' %>
+
 <div class="container">
-  <h1>My cocktail</h1>
-
-   <p><%= @cocktail.name %></p>
-
-  <ul>
-     <% @doses.each do |dose|%>
-        <p><%= dose.ingredient.name %> - <%= dose.description %>
-        <%= link_to "Delete a dose", dose_path(dose),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %></p>
-     <% end %>
-   </ul>
-
-  <br>
-  <br>
-
-  <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-
-  <br>
-  <br>
-
-  <%= link_to "Back to cocktails", cocktails_path, class: "btn btn-primary" %>
+  <div class="row">
+    <div class="card-ingredient">
+      <h2>Ingredients</h2>
+         <% @doses.each do |dose|%>
+            <p><%= image_tag("button.png", width: "20px") %>
+            <strong><%= dose.ingredient.name %></strong> - <%= dose.description %>
+            <%= link_to "(delete)", dose_path(dose),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></p>
+         <% end %>
+      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>
 

@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+}
+
+.card-ingredient {
+  text-align: center;
+  color: #4F6D7A;
+  font-family: 'Inconsolata', monospace;
+}
+
+.card-ingredient h2{
+  margin-bottom: 30px;
+}
+
+.card-ingredient a{
+  text-decoration: none;
+  color: #C0D6DF;
+}
+
+.card-ingredient a:hover{
+  opacity: 0.7;
+}
+
+.card-ingredient .btn{
+  background-color: #FF8811;
+  border: #FF8811;
+  margin-top: 10px;
+  color: white
+}
