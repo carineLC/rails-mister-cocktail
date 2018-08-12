@@ -1,10 +1,25 @@
-.btn{
+.btn-carine {
   background-color: #FF8811;
   border: #FF8811;
   font-family: 'Inconsolata', monospace;
   font-size: 18px;
+  color: white;
 }
 
-.btn:hover{
+.btn:hover {
+  color: white;
   opacity: 0.7;
+}
+.btn {
+  color: white;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
 }

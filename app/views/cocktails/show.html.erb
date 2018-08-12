@@ -1,5 +1,4 @@
 <%= render 'shared/smallBanner' %>
-
 <div class="container">
   <div class="row">
     <div class="card-ingredient">
@@ -9,9 +8,9 @@
             <strong><%= dose.ingredient.name %></strong> - <%= dose.description %>
             <%= link_to "(delete)", dose_path(dose),
               method: :delete,
-              data: { confirm: "Are you sure?" } %></p>
+              data: { confirm: "Are you sure?" }, class: "button-delete" %></p>
          <% end %>
-      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-carine" %>
     </div>
   </div>
 </div>
